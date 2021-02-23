@@ -24,7 +24,6 @@ class Eval(commands.Cog):
 
     @commands.command()
     async def eval(self, ctx, *, code : str = None):
-        print("lol")
         if ctx.author.guild_permissions.administrator == True:
             python = "```py\n{}\n```"
             if code == None:

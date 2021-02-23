@@ -14,6 +14,10 @@ client = commands.Bot(command_prefix= "%", intents=intents)
 async def on_ready():
     client.load_extension("Eval")
     print(f"{client.user.name} bot is now online.")
+    data = db["data"]
+    async for msg in client.get_channel(808617734539182100).history(limit = 50):
+        data.update({str(msg.id) : msg.embeds[0].fields[1].value})
+    db["data"] = data
 
 @client.event
 async def on_message(message):   
@@ -27,7 +31,12 @@ async def on_message(message):
 async def on_raw_message_delete(payload):
     if payload.channel_id == 808617734539182100:
         data = db["data"]
-        name = data[str(payload.message_id)]
+        try:
+            name = data[str(payload.message_id)]
+            del data[str(payload.message_id)]
+            db["data"] = data
+        except:
+            name = "error"
         await client.get_guild(808617491580452875).get_channel(809910085622038542).send(embed = discord.Embed(
             title = "Richiesta Completata ✅", description = f"La richiesta di `{name}` è stata completata", timestamp = datetime.utcnow(), color = 0xE8B125
         ).set_footer(text = client.get_guild(808617491580452875).name, icon_url = client.get_guild(808617491580452875).icon_url))
