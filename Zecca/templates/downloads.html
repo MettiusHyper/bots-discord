@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="shortcut icon" href="../static/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/script.js"></script>
+    <title>Quarantena</title>
+</head>
+<body>
+    <header>
+        <button onclick="openDropdown()"><p>☰</p></button>
+        <a href="/"><img alt="Quarantena Logo" src="../static/img/favicon.png"></a>
+        <div></div>
+        <ul class="dropdown">
+            <li><a href="/downloads"><h1>Downloads</h1></a></li>
+            <li><a href="/regolamento"><h1>Regolamento</h1></a></li>
+            <li><a href="/hosting"><h1>Hosting</h1></a></li>
+        </ul>
+    </header>
+    <div>
+        <div style="width: 100%; height: 2.8vh;"></div>
+        <div id="list">
+            {% for texture in textures: %}
+                <div class="download-list">
+                    <p>{{texture}}</p>
+                    <div style="width: 100%;"></div>
+                    <form onsubmit="open_download()" action="{{ url_for('downloadFile') }}" method="POST" id="account">
+                        <input type="submit" value="Download">
+                        <input  style = "display: none;" value="{{texture}}" name = "requested_texture">
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="par" style="display:none;">
+            <p>Caro acquirente di questo microsolco, lo scaricamento del medesimo volge al termine, e anche noi, come Walt Disney, vogliamo lasciarti con un misterioso messaggio subliminale, per comprenderlo sarà sufficiente leggere al contrario il simpatico versetto che segue:</p>
+            <br>
+            <p>acif alla onem 'op nu e</p>
+            <p>otteffa'lla ùip id asnep</p>
+            <p>acima aihccev aim anu</p>
+            <p>essid im onroig nu</p>
+            <form onsubmit="close_download()" method="POST">
+                <input type="submit" value="Scarica altri file">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

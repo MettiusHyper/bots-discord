@@ -1,0 +1,365 @@
+@font-face {
+    font-family: 'Mine';
+    src: url('./Minecrafter.Alt.ttf');
+}
+
+/* TEXT */
+p, h1, h2 {
+    font-family:'VT323', sans-serif;
+    color: #D6D6D7;
+}
+
+header p {
+    font-size: large;
+}
+
+h1 {
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.main h2 {
+    font-family: 'Mine';
+    font-variant-caps: all-petite-caps;
+    font-size: 8vw;
+    letter-spacing: 20px;
+    text-align: center;
+    margin: 3vh;
+    text-shadow: 8px 4px 1px #0c0c0c;
+}
+
+a {
+    text-decoration: none;
+}
+
+header h1:hover, header button :hover {
+    color: #ffffff;
+}
+
+/* GENERAL */
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../static/img/background.png');
+}
+
+.active {
+    color: #9e9e9e;
+}
+
+/* HEADER */
+header {
+    padding-top: 0.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header li {
+    margin-left: 2.5vw;
+}
+
+header button {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 2.5vw;
+    border: none;
+    background: none;
+    outline: inherit;
+}
+
+header img {
+    height: 60px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.work {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    width: 25vw;
+    margin-top: 10vh;
+}
+
+.dropdown {
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+/* BODY */
+.image {
+    margin-top: 0.5vh;
+    display: flex;
+    width: 100%;
+}
+
+.image img {
+    width: 50vw;
+    box-shadow: 20px 12px 10px #0c0c0c;
+    margin-left: 5vw;
+}
+
+.image p {
+    margin-left: 25px;
+    font-size: 1.9vw;
+    margin-right: 10px;
+}
+
+.texure-pack {
+    margin-top: 4vh;
+    display: flex;
+    width: 100%;
+}
+
+.texure-pack img {
+    width: 50vw;
+    box-shadow: 20px 12px 10px #0c0c0c;
+    margin-right: 5vw;
+}
+
+.texure-pack p {
+    margin-right: 25px;
+    font-size: 1.9vw;
+    margin-left: 15px;
+}
+
+#top {
+    display: none;
+}
+
+.side-image{
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    border: solid #0c0c0c 1px;
+    box-shadow: 2px 2px 5px #0c0c0c;
+    background-color: #516a33;
+    border-radius: 10px;
+    padding: 1.2vh 1.5vw 1.2vh 1.5vw;
+    margin: 1vh 1.5vw 0 1.5vw;
+}
+
+.button:hover {
+    box-shadow: none;
+    border: solid #D6D6D7 1px;
+}
+
+.button h1 {
+    margin: 0;
+}
+
+.download-list {
+    display: flex;
+    margin: 0 8vh 0 8vh;
+    background-color: #383838;
+    border-radius: 0.8vh;
+    border: solid #0c0c0c 1px;
+    box-shadow: 2px 2px 5px #0c0c0c;
+}
+
+.download-list p {
+    white-space: nowrap;
+    margin: 16px 0 16px 20px;
+}
+
+.download-list form {
+    display: flex;
+}
+
+.download-list input {
+    vertical-align: middle;
+    margin: 10px;
+    color: #D6D6D7;
+    padding: 1px 20px;
+    border-radius: 18px;
+    background-color: #1E1F23;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1.5px 1.5px 4px #0c0c0c;
+}
+
+.download-list input:hover {
+    box-shadow: none;
+}
+
+#par p {
+    margin: 0 4vw 0 4vw;
+}
+
+#par form {
+    margin-top: 3vh;
+    margin-left: 4vw;
+}
+
+#par input {
+    color: #D6D6D7;
+    padding: 8px 20px;
+    border-radius: 18px;
+    background-color: #1E1F23;
+    border: solid #383838 1px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #0c0c0c;
+}
+
+#par input:hover {
+    box-shadow: none;
+}
+
+#host {
+    font-size: 1.7vw;
+}
+
+.regole {
+    margin: 10px 4vw;
+    padding: 10px;
+    background-color: #2f3136;
+    border-radius: 14px;
+    margin-right: 18vw;
+}
+
+.regole p {
+    margin: 0;
+}
+
+.regole h1 {
+    margin-top: 0;
+}
+
+/* DEVICE SPECIFIC CSS */
+@media only screen and (max-width: 767px){
+    .download-list {
+        margin: 0 1.5vh 0 1.5vh;
+    }
+
+    header ul {
+        text-align: center;
+        display: block;
+    }
+
+    header div {
+        flex-basis: 100%;
+        height: 0;
+    }
+
+    header li {
+        margin: 0;
+    }
+
+    header button {
+        display: block;
+    }
+
+    header {
+        flex-flow: wrap;
+    }
+
+    .work {
+        width: 65vw;
+    }
+
+    .main h2 {
+        font-size: 5vw;
+    }
+    
+    .image {
+        display: block;
+        text-align: center;
+    }
+
+    .image img {
+        width: 80vw;
+        margin-left: 0;
+    }
+
+    .main h2 {
+        font-size: 10vw;
+        letter-spacing: 10px;
+        text-shadow: none;
+    }
+
+    .image p {
+        margin: 10px;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .texure-pack {
+        display: block;
+        text-align: center;
+    }
+
+    .texure-pack img {
+        width: 80vw;
+        margin: 0;
+    }
+
+    .texure-pack h2 {
+        font-size: 10vw;
+        letter-spacing: 10px;
+        text-shadow: none;
+    }
+
+    .texure-pack p {
+        margin: 10px;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    #top {
+        display: inline-block;
+    }
+
+    #bottom {
+        display: none;
+    }
+
+    #host {
+        font-size: 18px;
+    }
+
+    .regole {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 1650px){
+    .side-image p {
+        font-size: 28px;
+        margin-left: 8vw;
+        margin-right: 8vw;
+    }
+    
+    .texure-pack p {
+        font-size: 28px;
+        margin-left: 8vw;
+        margin-right: 8vw;
+    }
+}
+
+@keyframes slide {
+    0% {
+      transform: translate(0, -30px);
+      opacity:.1
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity:1
+    }
+}

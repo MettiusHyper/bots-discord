@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import ast
+from replit import db as collection
 
 def insert_returns(body):
     if isinstance(body[-1], ast.Expr):
@@ -24,18 +25,18 @@ class Eval(commands.Cog):
 
     @commands.command()
     async def eval(self, ctx, *, code : str = None):
-        print("lol")
         if ctx.author.guild_permissions.administrator == True:
             python = "```py\n{}\n```"
             if code == None:
-                return await ctx.send("**Enviroment variable**\n'client': self.client\n'ctx': ctx")
+                return await ctx.send("**Enviroment variable**\n'client': self.client\n'ctx': ctx\n'collection' : collection")
             code = code.strip("` ")
             code = "\n".join(f"    {i}" for i in code.splitlines())
             result = "None"
 
             env = {
                 'self': self,
-                'ctx': ctx
+                'ctx': ctx,
+                'collection' : collection
             }
             env.update(globals())
 

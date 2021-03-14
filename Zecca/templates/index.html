@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="shortcut icon" href="../static/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/script.js"></script>
+    <title>Quarantena</title>
+</head>
+<body>
+    <header>
+        <button onclick="openDropdown()"><p>☰</p></button>
+        <a href="/"><img alt="Quarantena Logo" src="../static/img/favicon.png"></a>
+        <div></div>
+        <ul class="dropdown">
+            <li><a href="/downloads"><h1>Downloads</h1></a></li>
+            <li><a href="/regolamento"><h1>Regolamento</h1></a></li>
+            <li><a href="/hosting"><h1>Hosting</h1></a></li>
+        </ul>
+    </header>
+    <div class="main">
+        <h2>QUARANTENA</h2>
+        <div class="image">
+            <img src="../static/img/home-image.png" alt="nether fortress">
+            <div class="side-image">
+                <p>Narrasi che un dì, tediati dal Coviddi,  e desiderosi d'un poco di svago pei loro meriggi, dei baldi giovani principiarono a radunarsi per svolgere attività videoludiche. Ben presto s'ampliò la compagnia, strinserossi amicizie, s'allargaron orizzonti, et li utenti di quarantena congegnarono magioni et costruzioni sempre più elaborate e fascinose (rubando una quantità non parca di tempo allo studio). I lettori avranno or ora già inteso che l'appellativo Quarantena provien dall'isolamento pel Covid, che contro l'aspettative, altro non fece che saldare tra loro i giovini amici, ormai, mi si passi la locuzione, BUSETTE E BOTON. Isperiamo che gradirete et gioverete dela nostra compagnia, e chissà, magari un dì persino voi potrete narrar ai posteri d'aver fatto parte d'una tal concomitanza, sì agguerrita et plena di coraggio :)</p>
+            </div>
+        </div>
+        <div class="texure-pack">
+            <img id = "top" src="../static/img/aspiragattoPolvere.gif" alt="AspiragattoPolvere">
+            <div class="side-image">
+                <p>Salve utente di Quarantena, questa è la texturepack che abbiamo designato apposta per te (minchia quanto sembra una pubblicità). Ciò che vedi qui a destra è un simpatico ASPIRAGATTOPOLVERE, uno dei memes che più è stato condiviso tra gli utenti di Quarantena, dunque un buon sunto del nostro gruppo. Gli aggiornamenti verranno periodicamente aggiunti nella sezione "download", dove potrai trovare anche alcune delle versioni precedenti (non tutte, perché siamo poveri e non possiamo pagare il servizio con più memoria, anche se delle donazioni sarebbero bene accette). Ad ogni modo speriamo che ti piaccia. Che lo sforzo sia con te!</p>
+            </div>
+            <img id = "bottom" src="../static/img/aspiragattoPolvere.gif" alt="AspiragattoPolvere">
+        </div>
+
+        <div style="height: 4vh; width: 100%;"></div>
+
+        <a href="/hosting">
+            <div class="button">
+                <h1>quarantena.skynode.gg</h1>
+            </div>
+        </a>
+
+        <a href="https://discord.gg/X77bu4eM9f">
+            <div class="button">
+                <h1>Server Discord</h1>
+            </div>
+        </a>
+
+        <a href="{{ url_for('downloadFile') }}">
+            <div class="button">
+                <h1>Texture Pack</h1>
+            </div>
+        </a>
+
+        <a href="https://skynode.gg/quarantena">
+            <div class="button">
+                <h1>Rinnova Server</h1>
+            </div>
+        </a>
+
+        <div style="height: 3vh; width: 100%;"></div>
+    </div>
+</body>
+</html>
