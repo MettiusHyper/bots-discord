@@ -23,7 +23,7 @@ This means that some modifications will be required if you intend to run this co
 ## ZeccaDelloStato
 
 A currecy bot created for a Minecraft server, you can pay other users and use the bal command to see transactions and balance\
-The bot uses the mongodb database to store  the data.\
+The bot uses the mongodb database to store the data.\
 It has been created to be used on replit.com but it can be hosted anywhere else.
 
 This bot also has a related website that is being used for multiple scopes, mainly for downloading the custom texture pack.
